@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Sparkles, Bot, User, MessageSquare, Flame, RefreshCw, CornerDownLeft } from "lucide-react";
+import { playNotificationSound } from "@/lib/sound-utils";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -18,19 +19,46 @@ export default function AIAssistantSection() {
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isSectionVisibleRef = useRef(false);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTo({
+        top: chatContainerRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
     scrollToBottom();
   }, [messages, loading]);
 
+  // Track if AI section is currently visible on screen
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isSectionVisibleRef.current = entry.isIntersecting;
+        if (entry.isIntersecting) {
+          // Reset unread count when section comes into view
+          window.dispatchEvent(new CustomEvent("ai-unread-count", { detail: { count: 0 } }));
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleSend = async (userText?: string) => {
-    const textToSend = userText || input;
-    if (!textToSend.trim() || loading) return;
+    const textToSend = (userText || input).trim();
+    if (!textToSend || loading) return;
 
     const newMessages: ChatMessage[] = [...messages, { role: "user", content: textToSend }];
     setMessages(newMessages);
@@ -47,6 +75,14 @@ export default function AIAssistantSection() {
       if (response.ok) {
         const data = await response.json();
         setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
+        
+        // Play notification chime
+        playNotificationSound();
+
+        // If user is scrolled away from the chat, increment unread badge on floating widget
+        if (!isSectionVisibleRef.current) {
+          window.dispatchEvent(new CustomEvent("ai-unread-count", { detail: { increment: true } }));
+        }
       } else {
         setMessages((prev) => [
           ...prev,
@@ -55,8 +91,9 @@ export default function AIAssistantSection() {
             content: "Bağlantı sırasında bir sorun oluştu. Doğrudan WhatsApp Keşif Hattımız üzerinden ustamızla iletişime geçebilirsiniz.",
           },
         ]);
+        playNotificationSound();
       }
-    } catch (error) {
+    } catch {
       setMessages((prev) => [
         ...prev,
         {
@@ -64,6 +101,7 @@ export default function AIAssistantSection() {
           content: "Bağlantı kurulamadı. Doğrudan 0534 874 87 13 numaralı telefonumuzdan bize ulaşabilirsiniz.",
         },
       ]);
+      playNotificationSound();
     } finally {
       setLoading(false);
     }
@@ -82,7 +120,7 @@ export default function AIAssistantSection() {
   )}`;
 
   return (
-    <section id="ai-assistant" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0d0f12] relative">
+    <section ref={sectionRef} id="ai-assistant" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0d0f12] relative">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -130,7 +168,10 @@ export default function AIAssistantSection() {
           </div>
 
           {/* Messages Area */}
-          <div className="p-4 sm:p-6 h-[420px] overflow-y-auto space-y-4 bg-[#0d0f12]/80">
+          <div
+            ref={chatContainerRef}
+            className="p-4 sm:p-6 h-[420px] overflow-y-auto space-y-4 bg-[#0d0f12]/80"
+          >
             {messages.map((msg, idx) => (
               <div
                 key={idx}
@@ -184,7 +225,6 @@ export default function AIAssistantSection() {
                 </div>
               </div>
             )}
-            <div ref={messagesEndRef} />
           </div>
 
           {/* Quick Presets */}
