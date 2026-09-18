@@ -1,12 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { AI_SYSTEM_PROMPT } from "@/lib/ai-config";
 
+export const maxDuration = 60;
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
 
-    if (!messages || !Array.isArray(messages)) {
-      return NextResponse.json({ error: "Ge?ersiz mesaj format?" }, { status: 400 });
+    if (!messages || !Array.isArray(messages) || messages.length === 0) {
+      return NextResponse.json({ error: "Geçersiz mesaj formatı" }, { status: 400 });
     }
 
     const apiKey = process.env.OPENROUTER_API_KEY;
@@ -18,6 +21,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Strip leading assistant welcome message so the conversation strictly starts with the user's first query
+    let cleanMessages = [...messages];
+    if (cleanMessages.length > 0 && cleanMessages[0].role === "assistant") {
+      cleanMessages = cleanMessages.slice(1);
+    }
+
+    // If no user messages remain, return early
+    if (cleanMessages.length === 0) {
+      return NextResponse.json({ reply: "Size nasıl yardımcı olabilirim?" });
+    }
+
+    const modelName = process.env.OPENROUTER_MODEL || "meta-llama/llama-3.3-70b-instruct";
+
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -27,13 +43,13 @@ export async function POST(req: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: process.env.OPENROUTER_MODEL || "google/gemini-2.0-flash-001",
+        model: modelName,
         messages: [
           { role: "system", content: AI_SYSTEM_PROMPT },
-          ...messages
+          ...cleanMessages
         ],
         temperature: 0.7,
-        max_tokens: 1000,
+        max_tokens: 1500,
       }),
     });
 
