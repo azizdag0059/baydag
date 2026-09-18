@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0f12;
+  --foreground: #f3f4f6;
+  --steel-dark: #12151a;
+  --steel-card: #181d24;
+  --steel-border: #28303d;
+  --steel-muted: #8b9bb0;
+  --forge-orange: #ff5e14;
+  --forge-amber: #f59e0b;
+}
+
+body {
+  background-color: #0d0f12;
+  color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+/* Industrial Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f12;
+}
+::-webkit-scrollbar-thumb {
+  background: #28303d;
+  border-radius: 0px;
+  border: 1px solid #ff5e14;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5e14;
+}
+
+/* Sharp Industrial Clip Paths & Grids */
+.clip-steel-corner {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.clip-steel-header {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0% 100%);
+}
+
+.steel-grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+                    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px, 48px 48px;
+}
+
+.metal-sheen {
+  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.04) 100%);
+}
+
+@keyframes forgePulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 94, 20, 0.3), inset 0 0 10px rgba(255, 94, 20, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 94, 20, 0.6), inset 0 0 18px rgba(255, 94, 20, 0.4);
+  }
+}
+
+.animate-forge-glow {
+  animation: forgePulse 3s infinite ease-in-out;
+}
