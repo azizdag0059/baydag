@@ -18,11 +18,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Dönüşüm Vitrini", href: "#before-after" },
-    { name: "AI Atölye Danışmanı", href: "#ai-assistant" },
-    { name: "Projelerimiz", href: "#projects" },
-    { name: "Zanaat & Hakkımızda", href: "#about" },
-    { name: "İletişim & Keşif", href: "#contact" },
+    { name: "Dönüşüm Vitrini", href: "/#before-after" },
+    { name: "AI Atölye Danışmanı", href: "/#ai-assistant" },
+    { name: "Projelerimiz", href: "/#projects" },
+    { name: "Zanaat & Hakkımızda", href: "/#about" },
+    { name: "İletişim & Keşif", href: "/#contact" },
   ];
 
   return (

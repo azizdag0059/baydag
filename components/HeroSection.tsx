@@ -17,11 +17,14 @@ export default function HeroSection() {
         {/* Top Tag Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#181d24] border border-[#ff5e14]/40 text-[#ff5e14] text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_15px_rgba(255,94,20,0.15)]">
           <Flame className="w-3.5 h-3.5 text-[#ff5e14] animate-pulse" />
-          <span>Tekirdağ & Trakya Bölgesi Özel Çelik & Ferforje İmalatı</span>
+          <span>Süleymanpaşa Atölyesi · Tekirdağ & Trakya Geneli Montaj</span>
         </div>
 
         {/* Main Heading */}
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight uppercase leading-[1.1] mb-6">
+          <span className="block text-sm sm:text-base md:text-lg font-bold tracking-[0.2em] text-[#9ca3af] mb-4">
+            Tekirdağ Demir Doğrama & Çelik İmalat
+          </span>
           HAM ÇELİKTEN <br className="hidden sm:inline" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5e14] via-[#f59e0b] to-[#ff5e14] drop-shadow-[0_0_35px_rgba(255,94,20,0.4)]">
             MİMARİ SANAT ESERİNE

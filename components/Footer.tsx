@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Hammer, MapPin, Phone, Navigation, Compass, ArrowUpRight } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
+import { SERVICES } from "@/lib/services-data";
 
 export default function Footer() {
   const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F";
@@ -63,35 +64,17 @@ export default function Footer() {
               İmalat Hizmetlerimiz
             </h4>
             <ul className="space-y-2.5">
+              {SERVICES.map((svc) => (
+                <li key={svc.slug}>
+                  <Link href={`/hizmetler/${svc.slug}`} className="hover:text-[#ff5e14] transition-colors">
+                    {svc.h1}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <a href="#projects" className="hover:text-[#ff5e14] transition-colors">
-                  Bungalow & Prefabrik Ev Montajı
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-[#ff5e14] transition-colors">
-                  Lüks Bina & Villa Giriş Kapıları
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-[#ff5e14] transition-colors">
-                  Lazer Kesim Balkon & Pencere Korkulukları
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-[#ff5e14] transition-colors">
-                  Uçak & Hangar Kapı Sistemleri
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-[#ff5e14] transition-colors">
+                <Link href="/#contact" className="hover:text-[#ff5e14] transition-colors">
                   Cam Balkon & PVC Sistemleri
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-[#ff5e14] transition-colors">
-                  Ağır Çelik Konstrüksiyon & Asma Kat
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -165,9 +148,9 @@ export default function Footer() {
               <span>@Baydag_59</span>
             </a>
             <span>•</span>
-            <a href="#before-after" className="hover:text-white">Vitrin</a>
+            <Link href="/#before-after" className="hover:text-white">Vitrin</Link>
             <span>•</span>
-            <a href="#ai-assistant" className="hover:text-white">AI Danışman</a>
+            <Link href="/#ai-assistant" className="hover:text-white">AI Danışman</Link>
           </div>
         </div>
       </div>

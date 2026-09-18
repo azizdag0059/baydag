@@ -1,45 +1,18 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+import { SITE } from "@/lib/site-config";
+import { SERVICES } from "@/lib/services-data";
 
+// Not: "#bolum" gibi hash URL'ler Google tarafından ayrı sayfa sayılmaz; sitemap'e sadece gerçek sayfalar girer.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://baydagdemir.com.tr";
-  const now = new Date();
-
+  const lastModified = new Date();
   return [
-    {
-      url: baseUrl,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/#before-after`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#ai-assistant`,
-      lastModified: now,
-      changeFrequency: "monthly",
+    { url: SITE.url, lastModified, changeFrequency: "weekly", priority: 1 },
+    ...SERVICES.map((s) => ({
+      url: `${SITE.url}/hizmetler/${s.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#projects`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+      images: [`${SITE.url}${s.image}`],
+    })),
   ];
 }

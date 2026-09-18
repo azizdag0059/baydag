@@ -43,7 +43,7 @@ export default function ProjectsGallery() {
                 >
                   <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} – ${project.location}`}
                     fill
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                   />

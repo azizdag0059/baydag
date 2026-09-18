@@ -113,7 +113,7 @@ export default function BeforeAfterDeck() {
                   >
                     <Image
                       src={viewMode === "before" ? activeProject.beforeImage : activeProject.afterImage}
-                      alt={`${activeProject.title} - ${viewMode}`}
+                      alt={`${activeProject.title} – ${activeProject.location} (${viewMode === "before" ? "kaba inşaat / montaj öncesi" : "tamamlanmış hali"})`}
                       fill
                       className="object-cover object-center"
                       priority
