@@ -1,63 +1,30 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { PORTFOLIO_PROJECTS, PortfolioItem } from "@/lib/projects-data";
+import { PORTFOLIO_PROJECTS } from "@/lib/projects-data";
 import { ArrowUpRight, MapPin, Layers, MessageSquare } from "lucide-react";
 
 export default function ProjectsGallery() {
-  const [activeFilter, setActiveFilter] = useState<string>("all");
-
-  const categories = [
-    { id: "all", name: "Tüm İmalatlar" },
-    { id: "kapi", name: "Kapı Sistemleri" },
-    { id: "korkuluk", name: "Korkuluk & Ferforje" },
-    { id: "merdiven", name: "Çelik Merdivenler" },
-    { id: "cati", name: "Pergola, Kanopi & Bungalow" },
-    { id: "asmakat", name: "Hangar, Köprü & Platform" },
-  ];
-
-  const filteredProjects =
-    activeFilter === "all"
-      ? PORTFOLIO_PROJECTS
-      : PORTFOLIO_PROJECTS.filter((p) => p.category === activeFilter);
-
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0d0f12]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#181d24] border border-[#ff5e14]/40 text-[#ff5e14] text-xs font-black uppercase tracking-widest mb-3">
-              <Layers className="w-3.5 h-3.5" />
-              <span>Zanaat Portfolyosu</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
-              ÖNE ÇIKAN <span className="text-[#ff5e14]">PROJELERİMİZ</span>
-            </h2>
+        <div className="mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#181d24] border border-[#ff5e14]/40 text-[#ff5e14] text-xs font-black uppercase tracking-widest mb-3">
+            <Layers className="w-3.5 h-3.5" />
+            <span>ZANAAT PORTFOLYOSU</span>
           </div>
-
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveFilter(cat.id)}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-200 border ${
-                  activeFilter === cat.id
-                    ? "bg-[#ff5e14] text-white border-[#ff5e14] shadow-[0_0_15px_rgba(255,94,20,0.4)]"
-                    : "bg-[#181d24] text-[#8b9bb0] border-[#28303d] hover:text-white hover:border-[#ff5e14]/50"
-                }`}
-              >
-                {cat.name}
-              </button>
-            ))}
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
+            ÖNE ÇIKAN <span className="text-[#ff5e14]">PROJELERİMİZ</span>
+          </h2>
+          <p className="text-sm sm:text-base text-[#9ca3af] max-w-2xl">
+            Tekirdağ ve Trakya genelinde hayata geçirdiğimiz lüks villa kapıları, ferforje korkuluklar, A-Frame çelik yapılar ve endüstriyel konstrüksiyon imalatlarımız.
+          </p>
         </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filteredProjects.map((project) => (
+          {PORTFOLIO_PROJECTS.map((project) => (
             <div
               key={project.id}
               className="bg-[#12151a] border border-[#28303d] hover:border-[#ff5e14]/70 transition-all duration-300 group overflow-hidden shadow-xl flex flex-col"
