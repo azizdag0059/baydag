@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Hammer, Flame, MessageSquare, Phone, Menu, X, ShieldCheck } from "lucide-react";
+import { InstagramIcon } from "@/components/icons/InstagramIcon";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -86,6 +87,16 @@ export default function Navbar() {
           {/* Actions */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
             <a
+              href="https://www.instagram.com/Baydag_59"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-[#181d24] hover:bg-[#e1306c] border border-[#28303d] hover:border-[#e1306c] text-gray-300 hover:text-white flex items-center justify-center transition-all duration-200 shadow-md"
+              aria-label="Instagram @Baydag_59"
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+
+            <a
               href="https://wa.me/905348748713?text=Merhaba%20Bayda%C4%9F%20Demir%2C%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Projem%20i%C3%A7in%20ke%C5%9Fif%20ve%20fiyat%20teklifi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
@@ -132,6 +143,15 @@ export default function Navbar() {
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>WhatsApp İle Keşif İste</span>
+              </a>
+              <a
+                href="https://www.instagram.com/Baydag_59"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-[#181d24] border border-[#e1306c]/40 text-[#e1306c] hover:text-white py-3 text-xs uppercase tracking-wider font-bold"
+              >
+                <InstagramIcon className="w-4 h-4" />
+                <span>Instagram: @Baydag_59</span>
               </a>
               <a
                 href="tel:+905348748713"

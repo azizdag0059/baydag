@@ -2,23 +2,25 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { PROJECTS_DATA } from "@/lib/projects-data";
-import { ArrowUpRight, CheckCircle2, MapPin, Layers } from "lucide-react";
+import { PORTFOLIO_PROJECTS, PortfolioItem } from "@/lib/projects-data";
+import { ArrowUpRight, MapPin, Layers, MessageSquare } from "lucide-react";
 
 export default function ProjectsGallery() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
 
   const categories = [
     { id: "all", name: "Tüm İmalatlar" },
+    { id: "kapi", name: "Kapı Sistemleri" },
+    { id: "korkuluk", name: "Korkuluk & Ferforje" },
     { id: "merdiven", name: "Çelik Merdivenler" },
-    { id: "cati", name: "Pergola & Çelik Yapılar" },
-    { id: "asmakat", name: "Hangar & Platformlar" },
+    { id: "cati", name: "Pergola, Kanopi & Bungalow" },
+    { id: "asmakat", name: "Hangar, Köprü & Platform" },
   ];
 
   const filteredProjects =
     activeFilter === "all"
-      ? PROJECTS_DATA
-      : PROJECTS_DATA.filter((p) => p.category === activeFilter);
+      ? PORTFOLIO_PROJECTS
+      : PORTFOLIO_PROJECTS.filter((p) => p.category === activeFilter);
 
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0d0f12]">
@@ -61,9 +63,13 @@ export default function ProjectsGallery() {
               className="bg-[#12151a] border border-[#28303d] hover:border-[#ff5e14]/70 transition-all duration-300 group overflow-hidden shadow-xl flex flex-col"
             >
               {/* Project Image */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-black">
+              <div
+                className={`relative w-full overflow-hidden bg-black ${
+                  project.aspectRatio === "3/4" ? "aspect-[4/3] sm:aspect-[4/3]" : "aspect-[4/3]"
+                }`}
+              >
                 <Image
-                  src={project.afterImage}
+                  src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
@@ -88,7 +94,7 @@ export default function ProjectsGallery() {
                     {project.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#9ca3af] mb-4 leading-relaxed">
-                    {project.afterDescription}
+                    {project.description}
                   </p>
 
                   {/* Specs Pill List */}
@@ -106,19 +112,21 @@ export default function ProjectsGallery() {
 
                 {/* Footer Action */}
                 <div className="pt-4 border-t border-[#28303d] flex items-center justify-between">
-                  <span className="text-xs text-[#8b9bb0] font-mono">
-                    {project.dimensions}
+                  <span className="text-xs text-[#10b981] font-semibold flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 bg-[#10b981] rounded-full" />
+                    Tamamlanmış İmalat
                   </span>
                   <a
                     href={`https://wa.me/905348748713?text=Merhaba%20Bayda%C4%9F%20Demir%2C%20%22${encodeURIComponent(
                       project.title
-                    )}%22%20projeniz%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.`}
+                    )}%22%20imalat%C4%B1n%C4%B1z%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20almak%20istiyorum.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ff5e14] hover:text-white uppercase tracking-wider group/link"
+                    className="inline-flex items-center gap-1.5 bg-[#ff5e14]/10 hover:bg-[#ff5e14] border border-[#ff5e14]/40 hover:border-[#ff5e14] text-[#ff5e14] hover:text-white px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-200 group/link"
                   >
+                    <MessageSquare className="w-3.5 h-3.5" />
                     <span>Fiyat & Keşif İste</span>
-                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                   </a>
                 </div>
               </div>

@@ -1,18 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, MapPin, MessageSquare, Clock, Send, CheckCircle2 } from "lucide-react";
+import { 
+  Phone, 
+  MapPin, 
+  MessageSquare, 
+  Clock, 
+  Send, 
+  CheckCircle2, 
+  Navigation, 
+  Compass,
+  ArrowUpRight
+} from "lucide-react";
+import { InstagramIcon } from "@/components/icons/InstagramIcon";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     district: "Süleymanpaşa",
-    projectType: "Özel Çelik Merdiven",
+    projectType: "Bungalow imalatı",
     message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  const projectTypeOptions = [
+    "Bungalow imalatı",
+    "Prefabrik ev yapım montaj",
+    "Bina giriş kapıları",
+    "Pencere korkulukları",
+    "Uçak kapı sistemleri",
+    "Cam balkon sistemleri",
+    "PVC sistemleri",
+    "Çelik Konstrüksiyon",
+    "Özel Tasarım Çelik Merdiven",
+    "Villa Bahçe & Garaj Kapısı",
+    "Veranda & Pergola Sistemleri",
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,6 +54,10 @@ export default function ContactSection() {
     window.open(`https://wa.me/905348748713?text=${text}`, "_blank");
     setSubmitted(true);
   };
+
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F";
+  const appleMapsUrl = "https://maps.apple.com/?q=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F";
+  const instagramUrl = "https://www.instagram.com/Baydag_59";
 
   return (
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0d0f12] relative">
@@ -49,11 +78,12 @@ export default function ContactSection() {
 
         {/* Form and Contact Info Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          {/* Left: Contact Details & Location */}
+          {/* Left: Contact Details, Location & Social */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
+              {/* Address & Navigation Buttons */}
               <div className="p-6 bg-[#12151a] border border-[#28303d]">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 bg-[#ff5e14]/20 border border-[#ff5e14] flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-[#ff5e14]" />
                   </div>
@@ -64,8 +94,34 @@ export default function ContactSection() {
                     </p>
                   </div>
                 </div>
+
+                {/* Road Navigation Actions */}
+                <div className="pt-3 border-t border-[#1f242d] flex flex-wrap gap-2">
+                  <a
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-2 bg-[#181d24] hover:bg-[#ff5e14] border border-[#28303d] hover:border-[#ff5e14] text-gray-200 hover:text-white text-[11px] font-bold uppercase transition-all duration-200"
+                  >
+                    <Navigation className="w-3.5 h-3.5 text-[#ff5e14] group-hover:text-white" />
+                    <span>Google Haritalar</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+
+                  <a
+                    href={appleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-2 bg-[#181d24] hover:bg-[#ff5e14] border border-[#28303d] hover:border-[#ff5e14] text-gray-200 hover:text-white text-[11px] font-bold uppercase transition-all duration-200"
+                  >
+                    <Compass className="w-3.5 h-3.5 text-[#ff5e14] group-hover:text-white" />
+                    <span>Apple Haritalar</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
 
+              {/* Phone & WhatsApp */}
               <div className="p-6 bg-[#12151a] border border-[#28303d]">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#ff5e14]/20 border border-[#ff5e14] flex items-center justify-center shrink-0">
@@ -84,6 +140,29 @@ export default function ContactSection() {
                 </div>
               </div>
 
+              {/* Instagram Card */}
+              <div className="p-6 bg-[#12151a] border border-[#28303d]">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#f59e0b]/20 to-[#e1306c]/20 border border-[#e1306c]/50 flex items-center justify-center shrink-0">
+                    <InstagramIcon className="w-5 h-5 text-[#e1306c]" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-bold text-sm uppercase mb-1">Sosyal Medya & Atölye Çekimleri</h4>
+                    <p className="text-xs text-[#9ca3af] mb-2">Güncel şantiye videoları ve imalat süreçlerimiz için bizi takip edin.</p>
+                    <a
+                      href={instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#e1306c] hover:text-white transition-colors"
+                    >
+                      <span>@Baydag_59 (Instagram)</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Working Hours */}
               <div className="p-6 bg-[#12151a] border border-[#28303d]">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-[#ff5e14]/20 border border-[#ff5e14] flex items-center justify-center shrink-0">
@@ -178,19 +257,18 @@ export default function ContactSection() {
 
                 <div>
                   <label className="block text-xs font-bold uppercase text-gray-300 mb-1.5">
-                    Proje Türü
+                    Hizmet / Proje Türü *
                   </label>
                   <select
                     value={formData.projectType}
                     onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                     className="w-full bg-[#0d0f12] border border-[#28303d] px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-[#ff5e14]"
                   >
-                    <option value="Özel Çelik Merdiven">Özel Çelik Merdiven</option>
-                    <option value="Bahçe / Garaj Kapısı">Bahçe / Garaj Kapısı</option>
-                    <option value="Lazer Kesim Korkuluk">Lazer Kesim Korkuluk</option>
-                    <option value="Çelik Asma Kat & Platform">Çelik Asma Kat & Platform</option>
-                    <option value="Sundurma & Çelik Çatı">Sundurma & Çelik Çatı</option>
-                    <option value="Özel Ferforje İmalatı">Özel Ferforje İmalatı</option>
+                    {projectTypeOptions.map((type) => (
+                      <option key={type} value={type}>
+                        {type}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -203,7 +281,7 @@ export default function ContactSection() {
                   rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Örn: Dubleks villa için 16 basamak omurgalı merdiven ve dikey korkuluk keşfi..."
+                  placeholder="Örn: Dubleks villa için omurgalı merdiven ve balkon korkuluk keşfi..."
                   className="w-full bg-[#0d0f12] border border-[#28303d] px-4 py-3 text-xs sm:text-sm text-white focus:outline-none focus:border-[#ff5e14]"
                 />
               </div>
