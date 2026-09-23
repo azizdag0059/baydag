@@ -17,7 +17,7 @@ export const SITE = {
     display: "Karadeniz, Dumansız Sk., 59030 Süleymanpaşa / Tekirdağ",
   },
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F",
+    "https://maps.app.goo.gl/sdreqCJ1hjmMQ85n9",
   hours: { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "08:00", closes: "19:30" },
   hoursDisplay: "Pazartesi – Cumartesi 08:00 – 19:30",
   areas: [

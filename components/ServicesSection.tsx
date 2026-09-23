@@ -22,7 +22,7 @@ export default function ServicesSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SERVICES.map((s) => (
+          {SERVICES.slice(0, 14).map((s) => (
             <Link
               key={s.slug}
               href={`/hizmetler/${s.slug}`}

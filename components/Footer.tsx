@@ -1,18 +1,25 @@
 import Link from "next/link";
-import { Hammer, MapPin, Phone, Navigation, Compass, ArrowUpRight } from "lucide-react";
+import { Hammer, MapPin, Phone, Navigation, Compass, ArrowUpRight, BookOpen } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { SERVICES } from "@/lib/services-data";
+import { GUIDES } from "@/lib/guides-data";
+import { SITE } from "@/lib/site-config";
 
 export default function Footer() {
-  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F";
-  const appleMapsUrl = "https://maps.apple.com/?q=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F";
-  const instagramUrl = "https://www.instagram.com/Baydag_59";
+  const googleMapsUrl =
+    "https://www.google.com/maps/search/?api=1&query=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F";
+  const appleMapsUrl =
+    "https://maps.apple.com/?q=Karadeniz+dumans%C4%B1z+sk+59030+S%C3%BCleymanpa%C5%9Fa+Tekirda%C4%9F";
+  const instagramUrl = SITE.instagram;
+
+  const topServices = SERVICES.slice(0, 8);
+  const topGuides = GUIDES.slice(0, 6);
 
   return (
     <footer className="bg-[#08090c] border-t border-[#181d24] text-gray-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Col 1: Brand */}
+          {/* Col 1: Brand & Contact */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 bg-[#181d24] border border-[#ff5e14]/60 flex items-center justify-center">
@@ -23,9 +30,22 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-xs text-[#8b9bb0] leading-relaxed mb-4">
-              Tekirdağ ve Trakya bölgesinde bungalow, çelik konstrüksiyon, bina giriş kapıları, lazer kesim korkuluklar ve endüstriyel hangar imalatında 25 yıllık zanaat güvencesi.
+              Tekirdağ Süleymanpaşa merkezli 25 yıllık zanaat güvencesiyle; çelik merdiven, lazer kesim korkuluk, villa kapısı, kanopi, çelik ev ve hangar imalatı.
             </p>
-            
+
+            <div className="space-y-2 text-xs text-[#8b9bb0] mb-4">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-[#ff5e14] shrink-0 mt-0.5" />
+                <span>{SITE.address.display}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-[#ff5e14] shrink-0" />
+                <a href={`tel:${SITE.phone}`} className="text-white font-bold hover:underline">
+                  {SITE.phoneDisplay}
+                </a>
+              </div>
+            </div>
+
             {/* Social & Maps Quick Links */}
             <div className="flex items-center gap-2 pt-2">
               <a
@@ -63,28 +83,49 @@ export default function Footer() {
             <h4 className="text-white font-bold uppercase tracking-wider mb-4 border-b border-[#1f242d] pb-2">
               İmalat Hizmetlerimiz
             </h4>
-            <ul className="space-y-2.5">
-              {SERVICES.map((svc) => (
+            <ul className="space-y-2 text-xs">
+              {topServices.map((svc) => (
                 <li key={svc.slug}>
                   <Link href={`/hizmetler/${svc.slug}`} className="hover:text-[#ff5e14] transition-colors">
-                    {svc.h1}
+                    {svc.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href="/#contact" className="hover:text-[#ff5e14] transition-colors">
-                  Cam Balkon & PVC Sistemleri
+            </ul>
+          </div>
+
+          {/* Col 3: Guides & Blog */}
+          <div>
+            <h4 className="text-white font-bold uppercase tracking-wider mb-4 border-b border-[#1f242d] pb-2 flex items-center gap-1.5">
+              <BookOpen className="w-3.5 h-3.5 text-[#ff5e14]" />
+              <span>Teknik Rehber & Blog</span>
+            </h4>
+            <ul className="space-y-2 text-xs">
+              {topGuides.map((g) => (
+                <li key={g.slug}>
+                  <Link href={`/rehber/${g.slug}`} className="hover:text-[#ff5e14] transition-colors line-clamp-1">
+                    {g.title.split("?")[0]}?
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-1">
+                <Link
+                  href="/rehber"
+                  className="inline-flex items-center gap-1 text-[#ff5e14] font-bold hover:underline"
+                >
+                  <span>Tüm Rehberleri Gör ({GUIDES.length})</span>
+                  <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Service Areas */}
+          {/* Col 4: Service Areas & LLM */}
           <div>
             <h4 className="text-white font-bold uppercase tracking-wider mb-4 border-b border-[#1f242d] pb-2">
               Hizmet Bölgelerimiz (Tekirdağ & Trakya)
             </h4>
-            <div className="flex flex-wrap gap-1.5 text-[11px]">
+            <div className="flex flex-wrap gap-1.5 text-[11px] mb-6">
               {[
                 "Süleymanpaşa",
                 "Çorlu",
@@ -99,37 +140,16 @@ export default function Footer() {
                 "Edirne",
                 "Kırklareli",
               ].map((area) => (
-                <span
-                  key={area}
-                  className="px-2 py-1 bg-[#12151a] border border-[#28303d] text-gray-300"
-                >
+                <span key={area} className="px-2 py-1 bg-[#12151a] border border-[#28303d] text-gray-300">
                   {area}
                 </span>
               ))}
             </div>
-          </div>
 
-          {/* Col 4: AI & GEO Direct Link */}
-          <div>
-            <h4 className="text-white font-bold uppercase tracking-wider mb-4 border-b border-[#1f242d] pb-2">
-              İletişim & Konum
-            </h4>
-            <div className="space-y-2 text-xs text-[#8b9bb0] mb-4">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#ff5e14] shrink-0 mt-0.5" />
-                <span>Karadeniz, Dumansız Sk., 59030 Süleymanpaşa / Tekirdağ</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#ff5e14] shrink-0" />
-                <a href="tel:+905348748713" className="text-white font-bold hover:underline">
-                  0534 874 87 13
-                </a>
-              </div>
-            </div>
             <a
               href="/llms.txt"
               target="_blank"
-              className="inline-flex items-center gap-1.5 text-xs text-[#f59e0b] hover:underline mb-2"
+              className="inline-flex items-center gap-1.5 text-xs text-[#f59e0b] hover:underline"
             >
               <span>llms.txt (LLM Model Özeti)</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -143,14 +163,27 @@ export default function Footer() {
             © {new Date().getFullYear()} Baydağ Demir (baydagdemir.com.tr) - Tüm Hakları Saklıdır.
           </p>
           <div className="flex items-center gap-4 text-[11px] text-gray-500">
-            <a href="https://www.instagram.com/Baydag_59" target="_blank" rel="noopener noreferrer" className="hover:text-[#e1306c] flex items-center gap-1">
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#e1306c] flex items-center gap-1"
+            >
               <InstagramIcon className="w-3.5 h-3.5" />
               <span>@Baydag_59</span>
             </a>
             <span>•</span>
-            <Link href="/#before-after" className="hover:text-white">Vitrin</Link>
+            <Link href="/rehber" className="hover:text-white">
+              Teknik Rehber
+            </Link>
             <span>•</span>
-            <Link href="/#ai-assistant" className="hover:text-white">AI Danışman</Link>
+            <Link href="/#before-after" className="hover:text-white">
+              Dönüşüm Vitrini
+            </Link>
+            <span>•</span>
+            <Link href="/#ai-assistant" className="hover:text-white">
+              AI Danışman
+            </Link>
           </div>
         </div>
       </div>

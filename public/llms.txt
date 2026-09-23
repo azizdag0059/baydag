@@ -1,8 +1,8 @@
 # Baydağ Demir
 
-> Baydağ Demir, Tekirdağ Süleymanpaşa'da bulunan bir demir doğrama ve çelik imalat atölyesidir. Çelik merdiven, lazer kesim ve ferforje korkuluk, villa ve bahçe kapıları, kanopi–sundurma–pergola, bungalov/A-Frame çelik ev ile çelik hangar, depo ve asma kat imal eder; Tekirdağ'ın tüm ilçelerine, Edirne ve Kırklareli'ne montaj yapar. Yerinde ölçü ve keşif ücretsizdir.
+> Baydağ Demir, Tekirdağ Süleymanpaşa merkezli 25 yıllık zanaat güvencesiyle demir doğrama ve çelik imalat atölyesidir. Çelik merdiven, lazer kesim ve ferforje korkuluk, villa ve bahçe kapıları, kanopi–sundurma–pergola, bungalov/A-Frame çelik ev ile çelik hangar, depo ve asma kat imal eder; Tekirdağ'ın tüm ilçelerine, Edirne ve Kırklareli'ne montaj yapar. Yerinde ölçü ve keşif ücretsizdir.
 
-## İletişim ve konum
+## İletişim ve Konum
 - Firma: Baydağ Demir
 - Web: https://baydagdemir.com.tr
 - Telefon / WhatsApp: +90 534 874 87 13
@@ -11,23 +11,33 @@
 - Instagram: https://www.instagram.com/Baydag_59
 - Hizmet bölgesi: Süleymanpaşa, Çorlu, Çerkezköy, Kapaklı, Marmaraereğlisi, Muratlı, Şarköy, Hayrabolu, Ergene, Malkara; Edirne, Kırklareli (Trakya)
 
-## Hizmetler
-- [Tekirdağ Çelik Merdiven İmalatı](https://baydagdemir.com.tr/hizmetler/celik-merdiven-tekirdag): Omurgalı, konsol ve döner çelik merdiven; masif ahşap basamak, LED, korkuluk.
-- [Lazer Kesim ve Ferforje Korkuluk](https://baydagdemir.com.tr/hizmetler/lazer-kesim-korkuluk-tekirdag): Balkon, teras, merdiven ve pencere korkulukları; deniz havasına dayanıklı fırın boya.
-- [Çelik Villa Giriş ve Bahçe Kapısı](https://baydagdemir.com.tr/hizmetler/celik-kapi-bahce-kapisi-tekirdag): Pivot villa kapısı, bina giriş kapısı, motorlu sürgülü/kanatlı bahçe kapısı.
-- [Çelik Kanopi, Sundurma ve Pergola](https://baydagdemir.com.tr/hizmetler/kanopi-pergola-veranda-tekirdag): Ticari cam kanopi, sundurma, çelik veranda, bioklimatik pergola.
-- [Bungalov ve A-Frame Çelik Ev](https://baydagdemir.com.tr/hizmetler/bungalov-a-frame-celik-ev-tekirdag): Çelik karkas bungalov, A-Frame ev, prefabrik ev montajı.
-- [Çelik Konstrüksiyon, Hangar ve Asma Kat](https://baydagdemir.com.tr/hizmetler/celik-konstruksiyon-hangar-asma-kat-tekirdag): Çelik hangar, depo, asma kat, platform, yaya köprüsü, endüstriyel kapı.
-- Cam balkon ve PVC sistemleri (detay için iletişime geçin).
+## Hizmet Sayfaları
+- [Tekirdağ Demir Doğrama ve Ferforje](https://baydagdemir.com.tr/hizmetler/demir-dograma-tekirdag): Pencere demirleri, bahçe çitleri, özel metal karkas işleri.
+- [Tekirdağ Çelik Konstrüksiyon](https://baydagdemir.com.tr/hizmetler/celik-konstruksiyon-tekirdag): Statik projeli sanayi ve konut çelik karkasları.
+- [Tekirdağ Çelik Çatı ve Sundurma](https://baydagdemir.com.tr/hizmetler/celik-cati-tekirdag): Fırtınaya ve kar yüküne dayanıklı çatı makasları ve sandviç paneller.
+- [Tekirdağ Çelik Merdiven İmalatı](https://baydagdemir.com.tr/hizmetler/celik-merdiven-tekirdag): Omurgalı, konsol ve ahşap basamaklı villa merdivenleri.
+- [Tekirdağ Demir ve Ferforje Korkuluk](https://baydagdemir.com.tr/hizmetler/demir-korkuluk-tekirdag): Balkon, teras ve merdiven ferforje korkulukları.
+- [Tekirdağ Çelik ve Lazer Kesim Korkuluk](https://baydagdemir.com.tr/hizmetler/celik-korkuluk-tekirdag): Dikey lama ve CNC lazer sac panelli modern korkuluklar.
+- [Tekirdağ Çelik Villa ve Bina Giriş Kapısı](https://baydagdemir.com.tr/hizmetler/celik-kapi-tekirdag): Pivot menteşeli ağır çelik villa ve apartman kapıları.
+- [Tekirdağ Demir ve Motorlu Bahçe Kapısı](https://baydagdemir.com.tr/hizmetler/bahce-kapisi-tekirdag): Otomatik sürgülü ve yana kayar demir bahçe kapıları.
+- [Tekirdağ CNC Lazer Kesim](https://baydagdemir.com.tr/hizmetler/lazer-kesim-tekirdag): 1-20 mm çelik sac CNC fiber lazer hassas kesim.
+- [Tekirdağ Çelik Kanopi ve Cam Sundurma](https://baydagdemir.com.tr/hizmetler/canopi-tekirdag): Paslanmaz gergi rotlu lamine cam giriş saçakları.
+- [Tekirdağ Çelik Pergola ve Veranda](https://baydagdemir.com.tr/hizmetler/pergola-tekirdag): Bioklimatik ve 4 mevsim kış bahçesi çelik karkasları.
+- [Tekirdağ Çelik Asma Kat ve Platform](https://baydagdemir.com.tr/hizmetler/asma-kat-tekirdag): Dükkan, fabrika ve depolar için yüksek taşıma kapasiteli ara katlar.
+- [Tekirdağ Çelik Hangar ve Depo](https://baydagdemir.com.tr/hizmetler/hangar-tekirdag): Kolonsuz geniş açıklıklı sanayi ve tarım hangarları.
+- [Tekirdağ Bungalov ve Çelik Ev](https://baydagdemir.com.tr/hizmetler/celik-ev-tekirdag): A-Frame doğa evleri, tiny house ve prefabrik çelik karkaslar.
 
-## Örnek projeler
-- Omurgalı çelik villa merdiveni – Süleymanpaşa: 3,40 m yükseklik, 17 basamak, NPU 160 omurga, masif meşe basamak; 12 günde imalat ve montaj.
-- Çelik-cam ticari giriş kanopisi – Süleymanpaşa: 18 m × 8,5 m (153 m²), HEA taşıyıcı, 10+10 mm lamine temperli cam; 14 gün.
-- Bioklimatik çelik veranda / pergola – Yeniçiftlik: 6,5 m × 4,2 m, motorlu lamel tavan; 7 gün.
-- A-Frame çelik ev – Şarköy / Uçmakdere: 54 m² taban + 26 m² asma kat; 21 gün.
-- Çelik depo / hangar – Çorlu: 15 m × 28 m (420 m²), HEA 240 kolon, PIR sandviç panel; 18 gün.
-
-## Sık sorulanlar
-- Keşif ücretli mi? Hayır, Tekirdağ ve ilçelerinde yerinde ölçü ve keşif ücretsizdir.
-- Fiyat nasıl alınır? WhatsApp'tan fotoğraf ve yaklaşık ölçü gönderilerek ön fiyat alınır; kesin fiyat yerinde ölçüden sonra verilir.
-- Çorlu / Çerkezköy / Şarköy'e hizmet var mı? Evet, Tekirdağ'ın tüm ilçelerine hizmet verilir.
+## Teknik Rehberler & Bilgi Merkezi
+- [Teknik Rehber Bilgi Merkezi](https://baydagdemir.com.tr/rehber)
+- [Demir Doğrama Nedir?](https://baydagdemir.com.tr/rehber/demir-dograma-nedir)
+- [Çelik Konstrüksiyon Nedir?](https://baydagdemir.com.tr/rehber/celik-konstruksiyon-nedir)
+- [Çelik Kapı Seçerken Nelere Dikkat Edilmeli?](https://baydagdemir.com.tr/rehber/celik-kapi-secerken-nelere-dikkat-edilmeli)
+- [Çelik Merdiven Nasıl Yapılır?](https://baydagdemir.com.tr/rehber/celik-merdiven-nasil-yapilir)
+- [Demir Korkuluk ile Çelik Korkuluk Farkı](https://baydagdemir.com.tr/rehber/demir-korkuluk-ve-celik-korkuluk-farki)
+- [CNC Lazer Kesim Nedir?](https://baydagdemir.com.tr/rehber/lazer-kesim-nedir)
+- [Çelik Çatı Nedir ve Neden Güvenlidir?](https://baydagdemir.com.tr/rehber/celik-cati-nedir)
+- [Çelik Ev Yaptırırken Nelere Dikkat Edilmeli?](https://baydagdemir.com.tr/rehber/celik-ev-yaptirirken-nelere-dikkat-edilmeli)
+- [Çelik Yapı ile Betonarme Yapı Farkı](https://baydagdemir.com.tr/rehber/celik-yapi-ile-betonarme-yapi-farki)
+- [Asma Kat Nedir?](https://baydagdemir.com.tr/rehber/asma-kat-nedir)
+- [Çelik Kanopi Nedir?](https://baydagdemir.com.tr/rehber/kanopi-nedir)
+- [Pergola ve Kanopi Farkı](https://baydagdemir.com.tr/rehber/pergola-ve-kanopi-farki)
