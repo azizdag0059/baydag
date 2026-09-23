@@ -331,8 +331,8 @@ export const SERVICES: ServiceItem[] = [
       "BFT / Nice / Somfy kapı motoru entegrasyonu",
       "Galvaniz kaplama ve elektrostatik fırın boya",
     ],
-    image: "/projects/after/villa-kapi.jpeg",
-    imageAlt: "Tekirdağ'da motorlu sürgülü demir bahçe kapısı imalatı",
+    image: "/projects/after/bahce-kapisi.jpg",
+    imageAlt: "Tekirdağ ahşap kaplamalı ve ferforje detaylı motorlu sürgülü bahçe kapısı imalatı - Baydağ Demir",
     projectCategories: ["kapi"],
     faqs: [
       {

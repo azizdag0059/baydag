@@ -200,5 +200,60 @@ export const PORTFOLIO_PROJECTS: PortfolioItem[] = [
     image: "/projects/after/celik-konstruksiyon.jpg",
     description: "Geniş açıklıklı çatı makasları ve ağır çelik kolon karkasıyla inşa edilen, statik deprem ve rüzgar hesaplarına uygun anahtar teslim çelik konstrüksiyon yapı.",
     aspectRatio: "4/3"
+  },
+  {
+    id: 9,
+    title: "Ahşap Kaplamalı & Ferforje Detaylı Motorlu Sürgülü Bahçe Kapısı",
+    category: "kapi",
+    categoryLabel: "Motorlu Bahçe Kapısı",
+    location: "Tekirdağ / Süleymanpaşa",
+    specs: ["Ağır Kutu Profil Karkas", "Doğal Ahşap Kompozit Panel", "Altın Varak Ferforje Motifler", "Motorlu Raylı Sürgü Mekanizması"],
+    image: "/projects/after/bahce-kapisi.jpg",
+    description: "Müstakil villa için özel olarak imal edilen, altın varak ferforje işlemeli, ahşap desen kompozit kaplamalı ve otomatik motorlu sürgülü bahçe kapısı.",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 10,
+    title: "CNC Lazer Kesim Motifli Modern Sürgülü Bahçe Kapısı",
+    category: "kapi",
+    categoryLabel: "Lazer Kesim Bahçe Kapısı",
+    location: "Tekirdağ / Şarköy",
+    specs: ["CNC Lazer Kesim Çelik Sac", "Kemerli Çelik Taşıyıcı Karkas", "Yüksek Güvenlikli Kilit Sistemi", "Elektrostatik Fırın Boya"],
+    image: "/projects/after/bahce-kapisi-lazer-kesim-surkulu.jpg",
+    description: "Geometrik CNC lazer kesim motifli, kemerli çelik üst taçlı ve ray üzerinde kayan modern villa bahçe kapısı.",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 11,
+    title: "Mızrak Başlıklı Klasik Ferforje Sürgülü Bahçe Kapısı",
+    category: "kapi",
+    categoryLabel: "Ferforje Bahçe Kapısı",
+    location: "Tekirdağ / Malkara",
+    specs: ["Dolu Dövme Kare Demir", "Altın Yaldız Mızrak Uçları", "Kavisli Üst Kemer Tasarımı", "Ağır Yük Zemin Ray Sistemi"],
+    image: "/projects/after/bahce-kapisi-ferforje-malkara.jpg",
+    description: "Geniş arsa ve çiftlik girişi için kavisli ferforje kemerli, altın yaldız süslemeli ve zemin raylı sürgülü klasik demir bahçe kapısı.",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 12,
+    title: "Otomatik Raylı Çift Sürgülü Site & Tesis Giriş Kapısı",
+    category: "kapi",
+    categoryLabel: "Otomatik Site Giriş Kapısı",
+    location: "Tekirdağ / Çorlu",
+    specs: ["Çift Yöne Açılır Sürgülü Ray", "Dairesel Motifli Ferforje Detaylar", "Merkezi Otomasyon Motoru", "Fotosel Emniyet Sensörleri"],
+    image: "/projects/after/bahce-kapisi-otomatik-surkulu.jpg",
+    description: "Site ve kurumsal tesis girişleri için çift kanatlı, fotoselli emniyet sistemli ve uzaktan kumandalı otomatik sürgülü demir kapı.",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 13,
+    title: "Kabartma Motifli Ağır Çelik Yana Kayar Otopark & Garaj Kapısı",
+    category: "kapi",
+    categoryLabel: "Endüstriyel Yana Kayar Kapı",
+    location: "Tekirdağ / Süleymanpaşa",
+    specs: ["Kabartma Pres Sac Paneller", "Üstten Askılı & Alttan Raylı Kılavuz", "Antrasit Fırın Boya", "Motorlu Otomasyon"],
+    image: "/projects/after/bahce-kapisi-otopark-kayar.jpg",
+    description: "Kapalı otopark ve garaj girişleri için kabartma klasik pres panelli, sağlam kılavuz ray sistemli yana kayar çelik kapı.",
+    aspectRatio: "4/3"
   }
 ];
