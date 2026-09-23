@@ -104,8 +104,8 @@ export const SERVICES: ServiceItem[] = [
       "Kimyasal ankraj pabuçları ve flanş plakaları",
       "Endüstriyel epoksi ve korozyon önleyici astar boyalar",
     ],
-    image: "/projects/after/4.jpeg",
-    imageAlt: "Tekirdağ Çorlu sanayi bölgesinde çelik konstrüksiyon depo ve karkas montajı",
+    image: "/projects/after/celik-konstruksiyon.jpg",
+    imageAlt: "Tekirdağ Baydağ Demir çelik konstrüksiyon bina ve çelik çatı makası montajı",
     projectCategories: ["asmakat", "cati"],
     faqs: [
       {
@@ -141,8 +141,8 @@ export const SERVICES: ServiceItem[] = [
       "Poliüretan/PIR dolgulu sandviç çatı panelleri",
       "Galvanizli yağmur oluğu ve dere sistemleri",
     ],
-    image: "/projects/after/4.jpeg",
-    imageAlt: "Tekirdağ'da çelik çatı makası ve sandviç panel montajı",
+    image: "/projects/after/celik-konstruksiyon.jpg",
+    imageAlt: "Tekirdağ Baydağ Demir çelik çatı makası ve konstrüksiyon montajı",
     projectCategories: ["cati"],
     faqs: [
       {
@@ -476,8 +476,8 @@ export const SERVICES: ServiceItem[] = [
       "M16 / M20 kimyasal ankraj pabuçları",
       "Elektrostatik fırın boya",
     ],
-    image: "/projects/after/4.jpeg",
-    imageAlt: "Sanayi dükkanında çelik asma kat ve platform montajı",
+    image: "/projects/after/celik-konstruksiyon-iskelet.jpg",
+    imageAlt: "Sanayi dükkanında çelik asma kat, kolon ve platform montajı",
     projectCategories: ["asmakat"],
     faqs: [
       {
@@ -513,7 +513,7 @@ export const SERVICES: ServiceItem[] = [
       "Ağır sanayi sürgülü kapı mekanizmaları",
       "Endüstriyel epoksi ve korozyon astarı",
     ],
-    image: "/projects/after/4.jpeg",
+    image: "/projects/after/celik-konstruksiyon.jpg",
     imageAlt: "Tekirdağ Çorlu sanayi bölgesinde çelik konstrüksiyon depo ve hangar binası",
     projectCategories: ["asmakat", "cati"],
     faqs: [
@@ -652,8 +652,8 @@ export const SERVICES: ServiceItem[] = [
     intro: ["Sanayi tesislerinde ek alan ihtiyacı çelik asma kat veya çelik depo ile çözülür."],
     scope: ["Çelik hangar ve depo binaları", "Çelik asma kat", "Endüstriyel platformlar"],
     materials: ["HEA / IPE çelik profil", "Sandviç panel", "Kimyasal ankraj"],
-    image: "/projects/after/4.jpeg",
-    imageAlt: "Tekirdağ Çorlu sanayi bölgesinde çelik konstrüksiyon depo ve hangar binası",
+    image: "/projects/after/celik-konstruksiyon.jpg",
+    imageAlt: "Tekirdağ Baydağ Demir çelik konstrüksiyon yapı ve çatı montajı",
     projectCategories: ["asmakat"],
     faqs: [...commonFaqs],
   },

@@ -95,18 +95,18 @@ export const PROJECTS_DATA: ProjectItem[] = [
   },
   {
     id: 5,
-    title: "Endüstriyel Çelik Konstrüksiyon Depo & Hangar",
+    title: "Çelik Konstrüksiyon Ticari Bina & Çatı Makası İmalatı",
     category: "asmakat",
-    categoryLabel: "Endüstriyel Çelik Hangar",
-    location: "Tekirdağ / Çorlu Sanayi Bölgesi",
+    categoryLabel: "Çelik Konstrüksiyon",
+    location: "Tekirdağ / Süleymanpaşa",
     duration: "18 Gün İmalat & Montaj",
-    specs: ["HEA Taşıyıcı Çelik Kolonlar", "Makaslı Çatı Konstrüksiyonu", "Poliüretan Sandviç Panel", "Endüstriyel Seksiyonel Kapı"],
-    beforeImage: "/projects/before/4.jpeg",
-    afterImage: "/projects/after/4.jpeg",
-    beforeDescription: "Zemin betonarme pabuçlarına ankrajlanan ana taşıyıcı çelik kolonlar ve çatı makas kirişlerinin vinçle montajı.",
-    afterDescription: "İzolasyonlu cephe ve çatı panelleriyle kaplanmış, doğal aydınlatma pencereleri ve geniş giriş kapısıyla kullanıma hazır sanayi yapısı.",
-    dimensions: "Genişlik: 15m | Uzunluk: 28m | Yükseklik: 6.50m (420 m²)",
-    materials: "HEA 240 Kolonlar, IPE 200 Çatı Kirişleri, 50mm PIR Sandviç Panel, Otomatik Seksiyonel Kapı",
+    specs: ["Ağır Çelik Taşıyıcı Karkas", "Makaslı Çelik Çatı Konstrüksiyonu", "Baydağ Demir Şantiye İmalatı", "Statik Deprem & Rüzgar Hesabı"],
+    beforeImage: "/projects/before/celik-konstruksiyon.jpg",
+    afterImage: "/projects/after/celik-konstruksiyon.jpg",
+    beforeDescription: "Zemin tabliyesi üzerinde ana taşıyıcı çelik kolonların dikimi, rüzgar çaprazları ve makas yerleşim aşaması.",
+    afterDescription: "Baydağ Demir tarafından imal edilen yüksek mukavemetli çatı makasları ve çelik konstrüksiyon karkas montajının tamamlanmış hali.",
+    dimensions: "Genişlik: 22m | Uzunluk: 45m | Yükseklik: 7.20m",
+    materials: "HEA / IPE Ağır Çelik Profiller, Makas Konstrüksiyonu, Epoksi Antipas ve Fırın Boya",
     aspectRatio: "4/3"
   }
 ];
@@ -192,13 +192,13 @@ export const PORTFOLIO_PROJECTS: PortfolioItem[] = [
   },
   {
     id: 8,
-    title: "Endüstriyel Çelik Konstrüksiyon Depo & Hangar",
+    title: "Çelik Konstrüksiyon Ticari Bina & Çatı Makası",
     category: "asmakat",
-    categoryLabel: "Sanayi Hangarı & Çelik Yapı",
-    location: "Tekirdağ / Çorlu Sanayi",
-    specs: ["HEA 240 Taşıyıcı Kolonlar", "Makaslı Çatı Konstrüksiyonu", "PIR Yalıtımlı Sandviç Panel", "Otomatik Seksiyonel Kapı"],
-    image: "/projects/after/4.jpeg",
-    description: "Sanayi ve lojistik tesisleri için geniş kolon aralıklarına sahip, yangına ve dış hava şartlarına dayanıklı prefabrike çelik depo binası.",
+    categoryLabel: "Çelik Konstrüksiyon",
+    location: "Tekirdağ / Süleymanpaşa",
+    specs: ["HEA Taşıyıcı Kolonlar", "Geniş Açıklıklı Çatı Makasları", "Baydağ Demir Şantiye İmalatı", "Epoksi Fırın Boya"],
+    image: "/projects/after/celik-konstruksiyon.jpg",
+    description: "Geniş açıklıklı çatı makasları ve ağır çelik kolon karkasıyla inşa edilen, statik deprem ve rüzgar hesaplarına uygun anahtar teslim çelik konstrüksiyon yapı.",
     aspectRatio: "4/3"
   }
 ];

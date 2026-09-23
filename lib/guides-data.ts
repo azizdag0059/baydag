@@ -114,8 +114,8 @@ export const GUIDES: GuideItem[] = [
     readTime: "6 dk",
     publishDate: "2026-03-12",
     summary: "Çelik konstrüksiyon; ana taşıyıcı kolon, kiriş ve makasların tamamen yüksek mukavemetli çelik profillerden (HEA, IPE, NPU) üretildiği ileri mühendislik yapı sistemidir.",
-    heroImage: "/projects/after/4.jpeg",
-    heroImageAlt: "Çelik konstrüksiyon sanayi yapısı karkas ve çatı makası montajı",
+    heroImage: "/projects/after/celik-konstruksiyon.jpg",
+    heroImageAlt: "Tekirdağ Baydağ Demir çelik konstrüksiyon yapı ve çatı makası montajı",
     intro: [
       "Çelik konstrüksiyon sistemler, deprem kuşağında yer alan Türkiye'de can güvenliği, geniş açıklık geçebilme kapasitesi ve montaj hızı açısından inşaat sektörünün en güvenilir çözümüdür.",
       "Betonarmenin ağır ve kırılgan yapısına karşılık çelik, elastik deformasyon yeteneği sayesinde deprem enerjisini sönümler ve göçme riskini en aza indirir.",
@@ -392,8 +392,8 @@ export const GUIDES: GuideItem[] = [
     readTime: "5 dk",
     publishDate: "2026-02-26",
     summary: "Çelik çatı; taşıyıcı makas ve aşık sistemlerinin çelik profillerden üretildiği, yangına, fırtınaya ve kar yüküne karşı en dayanıklı çatı konstrüksiyonudur.",
-    heroImage: "/projects/after/4.jpeg",
-    heroImageAlt: "Çelik çatı makası ve sandviç panel kaplama montajı",
+    heroImage: "/projects/after/celik-konstruksiyon.jpg",
+    heroImageAlt: "Tekirdağ Baydağ Demir çelik çatı makası ve konstrüksiyon montajı",
     intro: [
       "Trakya bölgesinin sert kış şartları, lodos fırtınaları ve yoğun kar yağışları çatı sistemlerinin mukavemetini doğrudan sınar.",
       "Geleneksel ahşap çatıların zamanla kurtlanması, eğrilmesi, yangın riski taşıması ve lodos fırtınasında uçması gibi risklere karşı çelik çatı kesin çözümdür."
@@ -497,8 +497,8 @@ export const GUIDES: GuideItem[] = [
     readTime: "5 dk",
     publishDate: "2026-02-18",
     summary: "Çelik yapılar betonarmeye göre 3 kat daha hızlı inşa edilir, deprem yüklerine karşı katlarca daha esnektir ve kolonsuz geniş iç alan imkanı sunar.",
-    heroImage: "/projects/after/4.jpeg",
-    heroImageAlt: "Çelik yapı karkas sistemi ile betonarme karşılaştırması",
+    heroImage: "/projects/after/celik-konstruksiyon.jpg",
+    heroImageAlt: "Tekirdağ Baydağ Demir çelik konstrüksiyon yapı karkası",
     intro: [
       "Depo, hangar, fabrika, villa veya dükkan inşa etmeyi planlayanların en çok ikilemde kaldığı soru: Çelik mi, betonarme mi?",
       "Her iki yapı türünün mühendislik, maliyet ve kullanım ömrü farklarını şeffafça karşılaştırdık."
@@ -542,7 +542,7 @@ export const GUIDES: GuideItem[] = [
     readTime: "5 dk",
     publishDate: "2026-02-15",
     summary: "Çelik asma kat; yüksek tavanlı dükkan, fabrika ve depolarda ana yapıya zarar vermeden bağımsız çelik kolon ve kirişlerle oluşturulan ara kat sistemidir.",
-    heroImage: "/projects/after/4.jpeg",
+    heroImage: "/projects/after/celik-konstruksiyon-iskelet.jpg",
     heroImageAlt: "Sanayi dükkanında çelik asma kat ve platform montajı",
     intro: [
       "Yüksek tavanlı bir ticari alanınız veya deponuz varsa, dikey hacmi kullanmamak ciddi bir alan israfıdır.",
