@@ -255,5 +255,38 @@ export const PORTFOLIO_PROJECTS: PortfolioItem[] = [
     image: "/projects/after/bahce-kapisi-otopark-kayar.jpg",
     description: "Kapalı otopark ve garaj girişleri için kabartma klasik pres panelli, sağlam kılavuz ray sistemli yana kayar çelik kapı.",
     aspectRatio: "4/3"
+  },
+  {
+    id: 14,
+    title: "Kemerli Modern Villa Sürgülü Bahçe Kapısı",
+    category: "kapi",
+    categoryLabel: "Kemerli Bahçe Kapısı",
+    location: "Tekirdağ / Süleymanpaşa",
+    specs: ["Kavisli Çelik Üst Kemer", "Bronz Oluklu Panel Arka Zemin", "Perçinli Ağır Çelik Kasa", "Motorlu Raylı Sürgü Mekanizması"],
+    image: "/projects/after/bahce-kapisi-kemerli-villa.jpg",
+    description: "Lüks müstakil villa girişi için kavisli kemer mimarili, bronz oluklu panel zeminli ve perçin detaylı raylı motorlu bahçe kapısı.",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 15,
+    title: "CNC Lazer Kesim Yıldız Motifli Site & Bina Bahçe Kapısı",
+    category: "kapi",
+    categoryLabel: "Lazer Kesim Site Kapısı",
+    location: "Tekirdağ / Çorlu",
+    specs: ["CNC Lazer Yıldız Motifli Sac", "Üst Emniyet Mızrak Başlıkları", "Geniş Kanat Sürgü Mekanizması", "Mat Siyah Elektrostatik Fırın Boya"],
+    image: "/projects/after/bahce-kapisi-lazer-bina.jpg",
+    description: "Modern rezidans ve site girişleri için CNC lazer kesim geometrik yıldız motifli, mızraklı güvenlik başlıklı ve motorlu sürgülü bahçe kapısı.",
+    aspectRatio: "4/3"
+  },
+  {
+    id: 16,
+    title: "Modern Antrasit Dikey Profilli Villa Bahçe Kapısı",
+    category: "kapi",
+    categoryLabel: "Modern Villa Bahçe Kapısı",
+    location: "Tekirdağ / Marmaraereğlisi",
+    specs: ["Üst Çelik Taç Karkas", "Dikey Kutu Profil Izgara", "Pirinç Aksesuar & Kilit", "Yana Kayar Motor Sistemi"],
+    image: "/projects/after/bahce-kapisi-antrasit-modern.jpg",
+    description: "Özel tasarım üst çelik taçlı, dikey profilli ve pirinç dairesel rozet detaylı modern antrasit sürgülü bahçe kapısı.",
+    aspectRatio: "4/3"
   }
 ];
